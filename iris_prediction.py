@@ -30,9 +30,10 @@ clf.fit(X_train, y_train)
 y_pred = clf.predict(X_test)
 
 
-# Save model
+# Save model in the current directory
 import joblib
-model_path = os.path.join(output_dir, "decision_tree_model.joblib")
+
+model_path = "decision_tree_model.joblib"  # saved in current folder
 joblib.dump(clf, model_path)
 
 
